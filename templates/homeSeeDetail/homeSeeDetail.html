@@ -1,0 +1,33 @@
+<ion-view hide-tabs="true">
+    <ion-header-bar id="seeDetail">
+        <button class="button button-icon ion-ios-arrow-left" ng-click="goBack()"></button>
+        <p class="see_p">{{notes.title}}</p>
+        <button class="button button-icon ion-ios-redo-outline"></button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="see_detail">
+            <ion-slide-box show-pager="true">
+                <ion-slide><img src="{{notes.imgsrc}}"></ion-slide>
+                <ion-slide><img src="{{notes.imgsrc01}}"></ion-slide>
+                <ion-slide><img src="{{notes.imgsrc02}}"></ion-slide>
+            </ion-slide-box>
+        </div>
+        <div class="bot">
+            <div class="see_content">
+                <h5 class="detail-title">{{notes.content}}</h5>
+                <p class="detail-city">来自{{notes.country}} <span>{{notes.brand}}</span></p>
+            </div>
+            <p class="price">{{notes.price | currency:"¥"}} <span>专柜价 :<i>{{notes.OldPrice | currency:"¥"}}</i> </span></p>
+            <div class="chose">{{notes.chose}}<i class="icon ion-ios-arrow-down"></i> </div>
+            <p class="intro">{{notes.desc}}</p>
+        </div>
+    </ion-content>
+    <div class="seeTab">
+        <div class="row seeTabR">
+            <div class="col col-10 seeTabC  ion-ios-cart" ui-sref="tabs.cart"></div>
+            <div class="col col-10 seeTabC ion-ios-heart-outline" ></div>
+            <div class="col col-40 seeTabOne" ng-click="add(notes)">加入购物车</div>
+            <div class="col col-40 seeTabTwo">立即购买</div>
+        </div>
+    </div>
+</ion-view>

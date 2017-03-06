@@ -1,0 +1,11 @@
+<ion-view hide-nav-bar="true">
+    <ion-content>
+        <ul class="list" ng-repeat="item in pic" ui-sref="tabs.homeSpeakDetail({title:item.num})">
+        <!--<ul class="list" ng-repeat="item in pic" href="#/tabs/home/homeSpeakDetail?title={{item.num}}">-->
+            <li class="item"><div class="find_pic"><img ng-src="{{item.imgsrc}}"></div> </li>
+            <!--<li class="item"><div class="find_pic"><img src="images/m_05.jpg"></div> </li>-->
+            <!--<li class="item"><div class="find_pic"><img src="images/img_03.jpg"></div> </li>-->
+
+        </ul>
+    </ion-content>
+</ion-view>

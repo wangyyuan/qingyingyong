@@ -1,0 +1,14 @@
+<ion-view hide-nav-bar="true">
+    <ion-content>
+        <ul class="waterfall-list" ng-waterfall cols="2">
+            <li ng-repeat="image in note" repeat-finished ui-sref="tabs.homeSeeDetail({title:image.num})">
+                <div class="data-block">
+                    <img src="{{image.imgsrc}}" alt="{{image.title}}"/>
+                    <p>{{image.title}}</p>
+                    <p>{{image.price | currency:"¥"}}</p>
+                </div>
+            </li>
+        </ul>
+
+    </ion-content>
+</ion-view>
